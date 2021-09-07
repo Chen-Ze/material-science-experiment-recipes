@@ -30,7 +30,7 @@ export function defaultRandomNumberRecipe(): RandomNumberRecipe {
 
 export function getRandomNumberRecipeVariables(recipe: RandomNumberRecipe): AvailableVariables {
     return {
-        private: recipe.generators.map(generator => generator.name),
-        public: recipe.generators.map(generator => `${generator.name}[]`)
-    }
+        private: recipe.generators.map((generator) => generator.name),
+        public: recipe.generators.map((generator) => `${generator.name}[]`),
+    };
 }
