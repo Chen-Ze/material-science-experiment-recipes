@@ -62,7 +62,7 @@ export function isFixedChannelRecipe(recipe: Keithley2636SMURecipe): recipe is F
 
 function defaultFixedChannelRecipe(smuMode: SMUMode.FixedCurrent | SMUMode.FixedVoltage): FixedChannelRecipe {
     return {
-        smuMode: smuMode,
+        smuMode,
         turnOffAfterDone: false,
         value: '0'
     };
@@ -117,10 +117,13 @@ export function isKeithley2636SimpleRecipe(entity: Recipe): entity is Keithley26
     return entity.type === 'Keithley2636Simple';
 }
 
-export function defaultKeithley2636SimpleRecipe() {
+export function defaultKeithley2636SimpleRecipe(): Keithley2636SimpleRecipe {
     return {
+        type: 'Keithley2636Simple',
         smuARecipe: defaultOffChannelRecipe(),
         smuBRecipe: defaultOffChannelRecipe(),
         wait: DEFAULT_WAIT,
+        privateVariables: [],
+        publicVariables: []
     };
 }
