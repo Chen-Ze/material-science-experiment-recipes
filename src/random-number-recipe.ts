@@ -1,6 +1,6 @@
 import { Recipe } from './recipe';
 
-interface RandomNumberGeneratorRecipe {
+export interface RandomNumberGeneratorRecipe {
     name: string;
     min: string;
     max: string;
