@@ -1,4 +1,4 @@
-import { Recipe } from "./recipe";
+import { Recipe } from './recipe';
 
 export interface PauseRecipe extends Recipe {
     type: 'Pause';
@@ -12,6 +12,6 @@ export function defaultPauseRecipe(): PauseRecipe {
     return {
         type: 'Pause',
         privateVariables: [],
-        publicVariables: []
+        publicVariables: [],
     };
 }

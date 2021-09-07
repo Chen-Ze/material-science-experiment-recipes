@@ -1,16 +1,15 @@
-import { Recipe } from "./recipe";
-
+import { Recipe } from './recipe';
 
 interface RandomNumberGeneratorRecipe {
-    name: string,
-    min: number,
-    max: number,
+    name: string;
+    min: number;
+    max: number;
 }
 
 export interface RandomNumberRecipe extends Recipe {
     type: 'RandomNumber';
-    generators: RandomNumberGeneratorRecipe[],
-    count: number
+    generators: RandomNumberGeneratorRecipe[];
+    count: number;
 }
 
 export function isRandomNumberRecipe(entity: Recipe): entity is RandomNumberRecipe {
@@ -23,6 +22,6 @@ export function defaultRandomNumberRecipe(): RandomNumberRecipe {
         privateVariables: [],
         publicVariables: [],
         generators: [],
-        count: 0
+        count: 0,
     };
 }
