@@ -15,3 +15,8 @@ export interface Recipe {
     privateExports: VariableExport[];
     publicExports: VariableExport[];
 }
+
+export interface AvailableVariables {
+    private: string[],
+    public: string[]
+}

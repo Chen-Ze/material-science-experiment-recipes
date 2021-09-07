@@ -1,4 +1,4 @@
-import { Recipe } from './recipe';
+import { AvailableVariables, Recipe } from './recipe';
 
 export interface RandomNumberGeneratorRecipe {
     name: string;
@@ -26,4 +26,11 @@ export function defaultRandomNumberRecipe(): RandomNumberRecipe {
         generators: [],
         count: '0',
     };
+}
+
+export function getRandomNumberRecipeVariables(recipe: RandomNumberRecipe): AvailableVariables {
+    return {
+        private: recipe.generators.map(generator => generator.name),
+        public: recipe.generators.map(generator => `${generator.name}[]`)
+    }
 }
