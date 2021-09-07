@@ -81,7 +81,7 @@ export function isSweepChannelRecipe(recipe: Keithley2636SMURecipe): recipe is S
 
 function defaultSweepChannelRecipe(smuMode: SMUMode.SweepCurrent | SMUMode.SweepVoltage): SweepChannelRecipe {
     return {
-        smuMode: smuMode,
+        smuMode,
         turnOffAfterDone: false,
         start: DEFAULT_START,
         stop: DEFAULT_STOP,
