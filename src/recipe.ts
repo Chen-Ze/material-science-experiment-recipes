@@ -3,8 +3,15 @@ export interface Variable {
     alias: string;
 }
 
+export interface VariableExport {
+    name: string;
+    column: string;
+}
+
 export interface Recipe {
     type: string;
     privateVariables: Variable[];
     publicVariables: Variable[];
+    privateExports: VariableExport[];
+    publicExports: VariableExport[];
 }

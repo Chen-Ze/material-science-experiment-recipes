@@ -13,5 +13,7 @@ export function defaultPauseRecipe(): PauseRecipe {
         type: 'Pause',
         privateVariables: [],
         publicVariables: [],
+        privateExports: [],
+        publicExports: [],
     };
 }

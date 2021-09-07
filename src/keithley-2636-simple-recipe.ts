@@ -125,5 +125,7 @@ export function defaultKeithley2636SimpleRecipe(): Keithley2636SimpleRecipe {
         wait: DEFAULT_WAIT,
         privateVariables: [],
         publicVariables: [],
+        privateExports: [],
+        publicExports: [],
     };
 }

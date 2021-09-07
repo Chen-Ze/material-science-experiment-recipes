@@ -21,6 +21,8 @@ export function defaultRandomNumberRecipe(): RandomNumberRecipe {
         type: 'RandomNumber',
         privateVariables: [],
         publicVariables: [],
+        privateExports: [],
+        publicExports: [],
         generators: [],
         count: '0',
     };
