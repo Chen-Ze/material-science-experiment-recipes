@@ -1,4 +1,4 @@
-import { Recipe } from "./recipe";
+import { Recipe } from './recipe';
 
 const DEFAULT_WAIT = 100;
 const DEFAULT_START = '0';
@@ -11,17 +11,17 @@ export enum SMUMode {
     FixedCurrent = 'Fixed Current',
     SweepCurrent = 'Sweep Current',
     FixedVoltage = 'Fixed Voltage',
-    SweepVoltage = 'Sweep Voltage'
+    SweepVoltage = 'Sweep Voltage',
 }
 
 interface Keithley2636SMURecipe {
-    smuMode: SMUMode,
-    turnOffAfterDone: boolean
+    smuMode: SMUMode;
+    turnOffAfterDone: boolean;
 }
 
 export interface OffChannelRecipe extends Keithley2636SMURecipe {
-    smuMode: SMUMode.Off,
-    turnOffAfterDone: true,
+    smuMode: SMUMode.Off;
+    turnOffAfterDone: true;
 }
 
 export function isOffChannelRecipe(recipe: Keithley2636SMURecipe): recipe is OffChannelRecipe {
@@ -36,8 +36,8 @@ function defaultOffChannelRecipe(): OffChannelRecipe {
 }
 
 export interface FreeChannelRecipe extends Keithley2636SMURecipe {
-    smuMode: SMUMode.Free,
-    turnOffAfterDone: false,
+    smuMode: SMUMode.Free;
+    turnOffAfterDone: false;
 }
 
 export function isFreeChannelRecipe(recipe: Keithley2636SMURecipe): recipe is FreeChannelRecipe {
@@ -52,8 +52,8 @@ function defaultFreeChannelRecipe(): FreeChannelRecipe {
 }
 
 export interface FixedChannelRecipe extends Keithley2636SMURecipe {
-    smuMode: SMUMode.FixedCurrent | SMUMode.FixedVoltage
-    value: string,
+    smuMode: SMUMode.FixedCurrent | SMUMode.FixedVoltage;
+    value: string;
 }
 
 export function isFixedChannelRecipe(recipe: Keithley2636SMURecipe): recipe is FixedChannelRecipe {
@@ -64,15 +64,15 @@ function defaultFixedChannelRecipe(smuMode: SMUMode.FixedCurrent | SMUMode.Fixed
     return {
         smuMode,
         turnOffAfterDone: false,
-        value: '0'
+        value: '0',
     };
 }
 
 export interface SweepChannelRecipe extends Keithley2636SMURecipe {
-    smuMode: SMUMode.SweepCurrent | SMUMode.SweepVoltage,
-    start: string,
-    stop: string,
-    step: string
+    smuMode: SMUMode.SweepCurrent | SMUMode.SweepVoltage;
+    start: string;
+    stop: string;
+    step: string;
 }
 
 export function isSweepChannelRecipe(recipe: Keithley2636SMURecipe): recipe is SweepChannelRecipe {
@@ -85,7 +85,7 @@ function defaultSweepChannelRecipe(smuMode: SMUMode.SweepCurrent | SMUMode.Sweep
         turnOffAfterDone: false,
         start: DEFAULT_START,
         stop: DEFAULT_STOP,
-        step: DEFAULT_STEP
+        step: DEFAULT_STEP,
     };
 }
 
@@ -107,10 +107,10 @@ export function defaultChannelRecipe(smuMode: SMUMode) {
 }
 
 export interface Keithley2636SimpleRecipe extends Recipe {
-    type: "Keithley2636Simple"
-    smuARecipe: SMURecipe,
-    smuBRecipe: SMURecipe,
-    wait: number
+    type: 'Keithley2636Simple';
+    smuARecipe: SMURecipe;
+    smuBRecipe: SMURecipe;
+    wait: number;
 }
 
 export function isKeithley2636SimpleRecipe(entity: Recipe): entity is Keithley2636SimpleRecipe {
@@ -124,6 +124,6 @@ export function defaultKeithley2636SimpleRecipe(): Keithley2636SimpleRecipe {
         smuBRecipe: defaultOffChannelRecipe(),
         wait: DEFAULT_WAIT,
         privateVariables: [],
-        publicVariables: []
+        publicVariables: [],
     };
 }

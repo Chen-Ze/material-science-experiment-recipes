@@ -1,10 +1,10 @@
 export interface Variable {
-    name: string,
-    type: string
+    name: string;
+    type: string;
 }
 
 export interface Recipe {
-    type: string,
-    privateVariables: Variable[],
-    publicVariables: Variable[]
+    type: string;
+    privateVariables: Variable[];
+    publicVariables: Variable[];
 }
