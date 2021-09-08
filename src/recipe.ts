@@ -20,3 +20,9 @@ export interface AvailableVariables {
     private: string[];
     public: string[];
 }
+
+export interface WrappedRecipe {
+    recipe: Recipe,
+    id: string | number,
+    subsequence: WrappedRecipe[]
+}
