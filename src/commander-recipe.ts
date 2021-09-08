@@ -8,7 +8,7 @@ export function isCommanderRecipe(entity: Recipe): entity is CommanderRecipe {
     return entity.type === 'Commander';
 }
 
-const DEFAULT_COMMANDER_RECIPE: CommanderRecipe = {
+export const DEFAULT_COMMANDER_RECIPE: CommanderRecipe = {
     type: 'Commander',
     privateVariables: [],
     publicVariables: [],
