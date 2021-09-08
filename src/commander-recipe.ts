@@ -14,7 +14,7 @@ const DEFAULT_COMMANDER_RECIPE: CommanderRecipe = {
     publicVariables: [],
     privateExports: [],
     publicExports: [],
-}
+};
 
 export function defaultCommanderRecipe(): CommanderRecipe {
     return DEFAULT_COMMANDER_RECIPE;
