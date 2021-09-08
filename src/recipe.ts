@@ -22,7 +22,7 @@ export interface AvailableVariables {
 }
 
 export interface WrappedRecipe {
-    recipe: Recipe,
-    id: string | number,
-    subsequence: WrappedRecipe[]
+    recipe: Recipe;
+    id: string | number;
+    subsequence: WrappedRecipe[];
 }
