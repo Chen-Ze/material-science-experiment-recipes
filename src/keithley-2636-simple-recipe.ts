@@ -132,7 +132,7 @@ export function defaultKeithley2636SimpleRecipe(): Keithley2636SimpleRecipe {
 
 export function getRandomNumberRecipeVariables(recipe: Keithley2636SimpleRecipe): AvailableVariables {
     return {
-        private: ["SMU A Voltage", "SMU A Current", "SMU B Voltage", "SMU B Current"],
-        public: ["SMU A Voltage[]", "SMU A Current[]", "SMU B Voltage[]", "SMU B Current[]"],
+        private: ['SMU A Voltage', 'SMU A Current', 'SMU B Voltage', 'SMU B Current'],
+        public: ['SMU A Voltage[]', 'SMU A Current[]', 'SMU B Voltage[]', 'SMU B Current[]'],
     };
 }
