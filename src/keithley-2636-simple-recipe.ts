@@ -1,4 +1,4 @@
-import { Recipe } from './recipe';
+import { AvailableVariables, Recipe } from './recipe';
 
 const DEFAULT_WAIT = 100;
 const DEFAULT_START = '0';
@@ -127,5 +127,12 @@ export function defaultKeithley2636SimpleRecipe(): Keithley2636SimpleRecipe {
         publicVariables: [],
         privateExports: [],
         publicExports: [],
+    };
+}
+
+export function getRandomNumberRecipeVariables(recipe: Keithley2636SimpleRecipe): AvailableVariables {
+    return {
+        private: ["SMU A Voltage", "SMU A Current", "SMU B Voltage", "SMU B Current"],
+        public: ["SMU A Voltage[]", "SMU A Current[]", "SMU B Voltage[]", "SMU B Current[]"],
     };
 }
