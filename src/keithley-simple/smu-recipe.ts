@@ -1,6 +1,6 @@
 const DEFAULT_START = '0';
-const DEFAULT_STEP = '1e-6';
 const DEFAULT_STOP = '1e-5';
+const DEFAULT_INTERVAL = '1e-6';
 
 export enum SMUMode {
     Off = 'Off',
@@ -73,8 +73,8 @@ export interface SweepChannelRecipe extends KeithleySMURecipe {
     smuMode: SMUMode.SweepCurrent | SMUMode.SweepVoltage;
     start: string;
     stop: string;
-    step: string;
     interval: string;
+    step: string;
 }
 
 export function isSweepChannelRecipe(recipe: KeithleySMURecipe): recipe is SweepChannelRecipe {
@@ -87,8 +87,8 @@ function defaultSweepChannelRecipe(smuMode: SMUMode.SweepCurrent | SMUMode.Sweep
         turnOffAfterDone: false,
         start: DEFAULT_START,
         stop: DEFAULT_STOP,
-        step: DEFAULT_STEP,
-        interval: '',
+        interval: DEFAULT_INTERVAL,
+        step: '',
         compliance: '',
     };
 }
