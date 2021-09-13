@@ -120,7 +120,7 @@ export function defaultKeithley2400SimpleRecipe(): Keithley2400SimpleRecipe {
     };
 }
 
-export function getRandomNumberRecipeVariables(recipe: Keithley2400SimpleRecipe): AvailableVariables {
+export function getKeithley2400SimpleRecipeVariables(recipe: Keithley2400SimpleRecipe): AvailableVariables {
     return {
         private: ['Voltage', 'Current'],
         public: ['Voltage[]', 'Current[]'],
