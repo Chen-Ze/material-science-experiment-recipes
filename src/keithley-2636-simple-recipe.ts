@@ -1,9 +1,8 @@
 import { SMUMode, defaultChannelRecipe, SMURecipe } from './keithley-simple/smu-recipe';
 import { AvailableVariables, Recipe } from './recipe';
 
-
-const DEFAULT_WAIT = "100";
-const DEFAULT_INTEGRATION_TIME = "10";
+const DEFAULT_WAIT = '100';
+const DEFAULT_INTEGRATION_TIME = '10';
 
 export interface Keithley2636SimpleRecipe extends Recipe {
     type: 'Keithley2636Simple';
