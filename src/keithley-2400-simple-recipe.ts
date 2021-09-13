@@ -33,7 +33,7 @@ function defaultOffChannelRecipe(): OffChannelRecipe {
     return {
         smuMode: SMUMode.Off,
         turnOffAfterDone: true,
-        compliance: ''
+        compliance: '',
     };
 }
 
@@ -51,7 +51,7 @@ function defaultFixedChannelRecipe(smuMode: SMUMode.FixedCurrent | SMUMode.Fixed
         smuMode,
         turnOffAfterDone: false,
         value: '0',
-        compliance: ''
+        compliance: '',
     };
 }
 
@@ -75,7 +75,7 @@ function defaultSweepChannelRecipe(smuMode: SMUMode.SweepCurrent | SMUMode.Sweep
         stop: DEFAULT_STOP,
         step: DEFAULT_STEP,
         interval: '',
-        compliance: ''
+        compliance: '',
     };
 }
 
@@ -99,7 +99,7 @@ export interface Keithley2400SimpleRecipe extends Recipe {
     smuRecipe: SMURecipe;
     wait: number;
     integrationTime: number;
-    name: string,
+    name: string;
 }
 
 export function isKeithley2400SimpleRecipe(entity: Recipe): entity is Keithley2400SimpleRecipe {

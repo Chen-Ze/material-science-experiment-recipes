@@ -120,7 +120,7 @@ export interface Keithley2636SimpleRecipe extends Recipe {
     smuBRecipe: SMURecipe;
     wait: number;
     integrationTime: number;
-    name: string,
+    name: string;
 }
 
 export function isKeithley2636SimpleRecipe(entity: Recipe): entity is Keithley2636SimpleRecipe {
