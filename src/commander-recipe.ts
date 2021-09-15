@@ -1,6 +1,5 @@
 import { Recipe } from './recipe';
 
-
 export interface InstrumentEntry {
     name: string;
     address: string;
@@ -10,7 +9,7 @@ export interface InstrumentEntry {
 export interface CommanderRecipe extends Recipe {
     type: 'Commander';
     store: any;
-    instruments: InstrumentEntry[]
+    instruments: InstrumentEntry[];
 }
 
 export function isCommanderRecipe(entity: Recipe): entity is CommanderRecipe {
@@ -24,7 +23,7 @@ export const DEFAULT_COMMANDER_RECIPE: CommanderRecipe = {
     privateExports: [],
     publicExports: [],
     store: {},
-    instruments: []
+    instruments: [],
 };
 
 export function defaultCommanderRecipe(): CommanderRecipe {
