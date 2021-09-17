@@ -1,4 +1,4 @@
-import { AvailableVariables, Recipe } from "./recipe";
+import { AvailableVariables, Recipe } from './recipe';
 
 export interface PythonSimpleRecipe extends Recipe {
     type: 'PythonSimple';
