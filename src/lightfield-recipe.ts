@@ -32,6 +32,6 @@ export function defaultLightFieldRecipe(): LightFieldRecipe {
 export function getLightFieldRecipeVariables(recipe: LightFieldRecipe): AvailableVariables {
     return {
         private: [],
-        public: [],
+        public: ["Spectrum[]", "Wavelength[]"],
     };
 }
