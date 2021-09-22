@@ -1,16 +1,16 @@
 import { AvailableVariables, Recipe } from './recipe';
 
 export enum LightFieldTask {
-    ActivateWindow = "Activate Window",
-    SaveSpectrum = "Save Spectrum"
+    ActivateWindow = 'Activate Window',
+    SaveSpectrum = 'Save Spectrum',
 }
 
 export interface LightFieldRecipe extends Recipe {
     type: 'LightField';
     task: LightFieldTask;
     payload: {
-        [key: string]: string
-    }
+        [key: string]: string;
+    };
 }
 
 export function isLightFieldRecipe(entity: Recipe): entity is LightFieldRecipe {
