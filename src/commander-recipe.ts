@@ -10,6 +10,8 @@ export interface CommanderRecipe extends Recipe {
     type: 'Commander';
     store: any;
     instruments: InstrumentEntry[];
+    columns: string[];
+    dataFile: string;
 }
 
 export function isCommanderRecipe(entity: Recipe): entity is CommanderRecipe {
@@ -24,6 +26,8 @@ export const DEFAULT_COMMANDER_RECIPE: CommanderRecipe = {
     publicExports: [],
     store: {},
     instruments: [],
+    columns: [],
+    dataFile: ''
 };
 
 export function defaultCommanderRecipe(): CommanderRecipe {
