@@ -27,7 +27,7 @@ export const DEFAULT_COMMANDER_RECIPE: CommanderRecipe = {
     store: {},
     instruments: [],
     columns: [],
-    dataFile: ''
+    dataFile: '',
 };
 
 export function defaultCommanderRecipe(): CommanderRecipe {
